@@ -2,13 +2,20 @@ package com.cartService.services;
 
 import java.util.List;
 
-import com.cartService.payload.CartItemDTO;
+import com.cartService.payload.CartItemDto;
+import com.cartService.payload.CartItemUpdateRequest;
 
 public interface CartItemService {
 	
-	CartItemDTO createNewCart(CartItemDTO cartItemDTO);
+	CartItemDto createNewCart(CartItemDto cartItemDto);
+	CartItemDto getCartItemById(Long itemId);
+	List<CartItemDto> getAllCartDetails();
+	CartItemDto updateCartDetails(Long itemId, CartItemUpdateRequest request);
+	CartItemDto deleteCart(Long itemId);
+	CartItemDto updateIsOrderedStatus(Long orderId);
 	
-	List<CartItemDTO> getAllDetails();
+ 	
+//	List<CartItemDTO> getAllDetails();
 	
 
 }

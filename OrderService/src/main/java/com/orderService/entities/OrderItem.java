@@ -1,5 +1,6 @@
-package com.cartService.entities;
+package com.orderService.entities;
 
+import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,18 +15,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "carts_item")
-public class CartItem {
-
+@Table(name = "order_items")
+public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long itemId;
-    private Long productId;
-    private int quantity;
-    private Long userId;
-    private Long orderId;  // Reference to Order, null if not yet ordered
-    private boolean isOrdered=false;  // Flag to indicate if the item has been ordered
-    
- 
-}
+    private Long id;
 
+    private Long cartItemId;   
+    private Long productId;
+    private Integer quantity;
+    private BigDecimal price;
+
+}

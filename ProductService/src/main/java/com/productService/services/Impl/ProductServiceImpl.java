@@ -43,11 +43,13 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public ProductDto updateProduct(Long productId, ProductDto productDto) {
 		Product product = productRepository.findById(productId).orElseThrow( ()-> new ProductNotFoundException("product not found with this id : "+productId));
-
+		
+		product.setProductId(productDto.getProductId());
 		product.setName(productDto.getName());
 		product.setCategory(productDto.getCategory());
 		product.setDescription(productDto.getDescription());
 		product.setPrice(productDto.getPrice());
+		product.setStockQuantity(productDto.getStockQuantity() );
 		
 		Product save = productRepository.save(product);
  		return modelMapper.map(save, ProductDto.class);

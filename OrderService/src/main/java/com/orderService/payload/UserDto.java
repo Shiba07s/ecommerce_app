@@ -1,4 +1,4 @@
-package com.cartService.payload;
+package com.orderService.payload;
 
  import lombok.AllArgsConstructor;
 import lombok.Data;

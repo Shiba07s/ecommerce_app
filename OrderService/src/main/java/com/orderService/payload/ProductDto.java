@@ -1,4 +1,4 @@
-package com.productService.Payload;
+package com.orderService.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,5 +15,6 @@ public class ProductDto {
     private String description;
     private Integer stockQuantity;
 
+ 
 
 }

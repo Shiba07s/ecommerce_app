@@ -1,6 +1,7 @@
 package com.productService.entities;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,9 +21,15 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productId;
+    @Column(nullable = false)
     private String name;
-    private String category;
-    private double price;
+    
     private String description;
-    // other fields like stock, manufacturer, etc.
+    
+    @Column(nullable = false)
+    private Double price;
+    
+    private String category;
+    
+    private Integer stockQuantity;
 }

@@ -6,4 +6,6 @@ import com.cartService.entities.CartItem;
 
 public interface CartItemRepository extends JpaRepository<CartItem, Long> {
 
+	CartItem findByOrderId(Long orderId);
+
 }
