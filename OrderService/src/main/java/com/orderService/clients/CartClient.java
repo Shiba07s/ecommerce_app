@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 import com.orderService.payload.CartItemDto;
 
-//@FeignClient(name="cart-service",url="http://localhost:7083")
 @FeignClient(name="cart-service",url = "${cart.service.url}")
 public interface CartClient {
 	

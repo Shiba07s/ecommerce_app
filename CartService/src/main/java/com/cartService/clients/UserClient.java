@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.cartService.payload.UserDto;
 
-@FeignClient(name="user-service",url = "http://localhost:7081")
+@FeignClient(name="user-service",url = "${user.service.url}")
 public interface UserClient {
 	
 	@GetMapping("/api/v1/users/{userId}")
