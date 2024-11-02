@@ -1,7 +1,7 @@
-1. Start ZooKeeper Server
-<pre><code>bin\windows\zookeeper-server-start.bat config\zookeeper.properties</code></pre>
-<button class="copy-button" data-clipboard-text="bin\windows\zookeeper-server-start.bat config\zookeeper.properties">Copy</button>
-Starts the ZooKeeper server, which is required for Kafka to operate. ZooKeeper manages the Kafka cluster state.
+1. Start Zipkin Server
+<pre><code>docker run -d -p 9411:9411 openzipkin/zipkin</code></pre>
+<button class="copy-button" data-clipboard-text="docker run -d -p 9411:9411 openzipkin/zipkin">Copy</button>
+Starts the Zipkin server.
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script>
