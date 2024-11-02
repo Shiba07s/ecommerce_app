@@ -44,7 +44,6 @@ public class UserServiceImpl implements UserService {
 			
 			User user = userById.get();
 			System.out.println("user Id value: "+user);
-			user.setUserId(userDto.getUserId());
 			user.setName(userDto.getName());
 			user.setEmail(userDto.getEmail());
 			user.setAddress(userDto.getAddress());
